@@ -7,7 +7,7 @@ salla-button {
   }
 
   &.copied {
-    .s-button-text{
+    .s-button-text {
       @apply text-green-600;
     }
 
@@ -72,7 +72,7 @@ salla-button {
   &--wishlist {
     @apply m-0 rtl:mr-0.5 ltr:ml-0.5;
 
-    &:hover{
+    &:hover {
       @apply text-gray-600;
     }
 
@@ -90,7 +90,7 @@ salla-button {
   }
 
   &--icon {
-    @apply flex items-center justify-center transition bg-white text-gray-500 border-gray-200  hover:border-gray-200 hover:text-gray-600 mx-1 border rounded-full w-10 h-10 font-medium flex-shrink-0;
+    @apply flex items-center justify-center transition bg-white text-gray-500 border-gray-200 hover:border-gray-200 hover:text-gray-600 mx-1 border rounded-full w-10 h-10 font-medium flex-shrink-0;
 
     i {
       @apply pointer-events-none;
@@ -170,8 +170,9 @@ button.btn--coupon {
 }
 
 salla-button {
+
   &.has-not-coupon button .icon,
-  &.has-coupon button .coupon-text{
+  &.has-coupon button .coupon-text {
     @apply hidden;
   }
 

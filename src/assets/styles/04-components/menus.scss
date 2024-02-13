@@ -105,6 +105,10 @@
 }
 // Mobile Slide Menu
 @media only screen and (max-width: 1024px) {
+
+  [is="custom-navigation-menu"] {
+    display: none;
+  }
   .filters-opened{
     .close-filters{
       display: block !important;
