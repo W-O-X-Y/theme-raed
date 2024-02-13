@@ -149,7 +149,7 @@ passed color, `alpha` range from 0.0-1.0 |
   </script>
 
   <script defer src="{{ 'product-card.js'|asset }}"></script>
-  <script defer src="{{ 'main-menu.js'|asset }}"></script>
+  <script defer src="{{ 'navigation-menu.js'|asset }}"></script>
 
   <script data-cfasync="false">
     window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
@@ -202,7 +202,6 @@ passed color, `alpha` range from 0.0-1.0 |
     {% hook 'body:start' %}
     <salla-app-install-alert></salla-app-install-alert>
 
-    <salla-reviews></salla-reviews>
     {% component 'header.header' %}
     {% block content %}{% endblock %}
 
@@ -212,7 +211,7 @@ passed color, `alpha` range from 0.0-1.0 |
   <script defer src="{{ 'app.js' | asset }}"></script>
 
   {# Twilight Components #}
-  <salla-offer-modal display-all-link></salla-offer-modal>
+  <salla-offer-modal></salla-offer-modal>
   <salla-search></salla-search>
 
   {% if user.type=='guest' %}
