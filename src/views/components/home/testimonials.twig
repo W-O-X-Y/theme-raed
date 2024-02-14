@@ -15,6 +15,7 @@
 #}
 
 <section class="s-block s-block--testimonials container overflow-hidden">
+    
     <div class="lg:overflow-hidden">
         <div class="flex justify-between">
             <h1 class="mb-4 mr-2 text-lg font-bold leading-[1.2]">{{ trans('blocks.home.testimonials') }}</h1>
@@ -22,6 +23,8 @@
                 <a href="{{ link('testimonials') }}" class="s-block__display-all">{{ trans('blocks.home.display_all') }} <i class="sicon-arrow-left"></i></a>
             {% endif %}
         </div>
+        {# <salla-reviews></salla-reviews> #}
+
         <salla-slider 
           centered
           slides-per-view="1"

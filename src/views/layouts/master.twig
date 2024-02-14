@@ -149,22 +149,25 @@ passed color, `alpha` range from 0.0-1.0 |
   </script>
 
   <script defer src="{{ 'product-card.js'|asset }}"></script>
-  <script defer src="{{ 'navigation-menu.js'|asset }}"></script>
+  <script defer src="{{ 'main-menu.js'|asset }}"></script>
 
   <script data-cfasync="false">
     window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
     window.imageZoom = "{{theme.settings.get('imageZoom')}}"
   </script>
-  <script>
-    window.salla = window.Salla = window.Salla || {};
-    Salla.onReady = Salla.onReady || function (callback) {
-      if (['ready', 'completed'].includes(Salla.status)) {
+{#{% hook 'head:start' %}#}
+<script>
+  window.salla  =  window.Salla  =  window.Salla  || {};
+  Salla.onReady  =  Salla.onReady  ||  function (callback) {
+    if (['ready', 'completed'].includes(Salla.status)) {
         callback();
         return;
-      }
-      window.addEventListener('twilight::initiated', callback, { once: true });
-    };
-  </script>
+    }
+    window.addEventListener('twilight::initiated', callback, {once:  true});
+  };
+</script>
+
+<script async src="https://cdn.salla.network/js/twilight/tests/featureTD-174-salla-menu/6769eec7f23af1a2e67e69550ad0e655fb7ccd61/twilight.js"></script>
   <script type="module" src="https://localhost:3333/build/twilight.esm.js"></script>
   <script nomodule src="https://localhost:3333/build/twilight.js"></script>
 
@@ -211,7 +214,7 @@ passed color, `alpha` range from 0.0-1.0 |
   <script defer src="{{ 'app.js' | asset }}"></script>
 
   {# Twilight Components #}
-  <salla-offer-modal></salla-offer-modal>
+  <salla-offer-modal display-all-link></salla-offer-modal>
   <salla-search></salla-search>
 
   {% if user.type=='guest' %}
