@@ -167,9 +167,8 @@ passed color, `alpha` range from 0.0-1.0 |
   };
 </script>
 
-<script async src="https://cdn.salla.network/js/twilight/tests/featureTD-174-salla-menu/6769eec7f23af1a2e67e69550ad0e655fb7ccd61/twilight.js"></script>
+<script async src="https://cdn.salla.network/js/twilight/tests/featureTD-174-new--storage-methods-with-ttl/e81443335ee855194e87f58593b4987f5ecf1516/twilight.js"></script>
 
-  {# {% hook 'head:start' %} #}
   {% hook head %}
   {% block styles %}{% endblock %}
   <link rel="stylesheet" href="{{ 'app.css' | asset }}">
@@ -202,7 +201,7 @@ passed color, `alpha` range from 0.0-1.0 |
   <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     <salla-app-install-alert></salla-app-install-alert>
-
+  
     {% component 'header.header' %}
     {% block content %}{% endblock %}
 
