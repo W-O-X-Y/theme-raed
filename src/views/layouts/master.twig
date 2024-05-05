@@ -155,8 +155,7 @@ passed color, `alpha` range from 0.0-1.0 |
     window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
     window.imageZoom = "{{theme.settings.get('imageZoom')}}"
   </script>
-
- <script>
+ <script data-cfasync="false">
   window.salla  =  window.Salla  =  window.Salla  || {};
   Salla.onReady  =  Salla.onReady  ||  function (callback) {
     if (['ready', 'completed'].includes(Salla.status)) {
@@ -169,7 +168,6 @@ passed color, `alpha` range from 0.0-1.0 |
 
 <script async src="https://cdn.salla.network/js/twilight/tests/bugfixTD-507-fix-price-range-rendering/ec9b5e9f438ac100cc29c9b894e5ff93cb3eeb8b/twilight.js"></script>
 
-  {# {% hook 'head:start' %} #}
   {% hook head %}
   {% block styles %}{% endblock %}
   <link rel="stylesheet" href="{{ 'app.css' | asset }}">
@@ -199,7 +197,7 @@ passed color, `alpha` range from 0.0-1.0 |
     To get full functionality of this site you need to enable JavaScript. Here is how
     <a href="https://www.enable-javascript.com/" rel="noreferrer" target="_blank">To enable JavaScript on webpage</a>.
   </noscript>
-  <div class="app-inner flex flex-col min-h-full">
+  <div class="flex flex-col min-h-full app-inner">
     {% hook 'body:start' %}
     <salla-app-install-alert></salla-app-install-alert>
   
@@ -208,6 +206,7 @@ passed color, `alpha` range from 0.0-1.0 |
 
     {% component 'footer.footer' %}
   </div>
+<div></div>
   {% hook 'body:end' %}
   <script defer src="{{ 'app.js' | asset }}"></script>
 
